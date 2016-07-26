@@ -1,0 +1,4 @@
+This script takes two arguments on execution - a url and file extension (with or without the dot).
+Example: file_downloader.sh example.com pdf
+It does not recursively search web pages. It greps though the webpages html for the extension and the results are piped through to sed. sed searches for strings enclosed in quotations on that line. With luck it will catch links to the filtype specified. This method is messy and easily broken, but it's faster than downloading a whole semester's worth of notes via point-and-click - worth a shot right? 
+Requirements: parallel (sudo apt-get install parallel)
