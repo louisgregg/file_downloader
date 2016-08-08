@@ -9,8 +9,8 @@ url=$1
 shift
 old="$IFS"
 IFS=','
-extensions="'$*'"
+extensions="$*"
 echo 'extensions to be retrieved are: '"$extensions"
 IFS=$old
 
-wget --accept "$(extensions)" --mirror --progress=bar --adjust-extension --convert-links --backup-converted --no-parent -nd $url
+wget --accept $extensions --mirror --progress=bar --adjust-extension --convert-links --backup-converted --no-parent -nd $url
